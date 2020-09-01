@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  mongodb:
+    image: mongodb:latest
+    build:
+      dockerfile: ./Dockerfile
+      context: .
+
+    container_name: mongodb
+    hostname: mongodb
+    ports:
+      - "27017:27017"
+      - "27018:27018"
+      - "27019:27019"
+    environment:
+      ENV: "test"
