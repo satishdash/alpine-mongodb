@@ -1,4 +1,7 @@
 FROM alpine:latest
+
+MAINTAINER "Satish Dash<satishcourses@gmail.com>"
+
 WORKDIR /
 
 # [pointers]
@@ -31,7 +34,7 @@ RUN openssl x509 -sha256 -req -days 730 -in mongodb-test-ia.csr -CA mongodb-test
 -set_serial 01 -out mongodb-test-ia.crt -extfile /openssl-test-ca.cnf -extensions v3_ca
 RUN cat mongodb-test-ca.key mongodb-test-ca.crt  > /ca.pem
 
-CMD [ "mongod", \
+ENTRYPOINT [ "mongod", \
 "--auth", \
 "--bind_ip_all", \
 "--sslMode", "allowSSL", \
