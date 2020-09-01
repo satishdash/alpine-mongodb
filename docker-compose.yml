@@ -1,4 +1,4 @@
-version: "3.8"
+version: "3.3"
 
 services:
   mongodb:
@@ -14,4 +14,4 @@ services:
       - "27018:27018"
       - "27019:27019"
     environment:
-      ENV: "test"
+      ENV: "qa"

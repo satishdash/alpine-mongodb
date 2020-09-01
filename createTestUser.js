@@ -1,7 +1,7 @@
 //  NOT FOR PRODUCTION USAGE.
-//  Creates a DB user with a password
-//  username = mongo
-//  password = mongo
+//  Creates a DBA user with a password
+//  username = admin
+//  password = admin
 //  To be authenticated in the shell session as below:
 //  mongo --authenticationDatabase "admin" -u "mongo" -p "mongo"
 //  This script is run as below:

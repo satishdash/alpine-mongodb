@@ -2,7 +2,7 @@ FROM alpine:latest
 WORKDIR /
 
 # [pointers]
-#   Below repository links are added as MongoDB package has been removed since alpine3.10
+#   Below repository links are added as MongoDB has been removed since alpine3.10
 #   https://alpinelinux.org/posts/Alpine-3.10.0-released.html
 #   https://unix.stackexchange.com/questions/568530/installing-mongodb-on-alpine-3-9
 
@@ -18,7 +18,7 @@ EXPOSE 27017 27018 27019
 #   https://docs.mongodb.com/manual/appendix/security/appendixA-openssl-ca/#b-generate-the-test-ca-pem-file
 #   NOTES:
 #       - https://jira.mongodb.org/browse/SERVER-10495
-COPY ops/citests/* /
+COPY . /
 
 RUN openssl genrsa -out mongodb-test-ca.key 4096
 RUN openssl req -new -x509 -days 1826 -key mongodb-test-ca.key -out mongodb-test-ca.crt \
