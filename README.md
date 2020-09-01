@@ -5,7 +5,7 @@ Creates an alpine based mongodb4.0 docker image
 
 :bulb: **Credentials**
 
-[NOT FOR PRODUCTION USE]
+*[NOT FOR PRODUCTION USE]*
 
 Admin User
 ```
